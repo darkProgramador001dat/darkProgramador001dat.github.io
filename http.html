@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="darkProgramador001dat" author="darkProgramador001dat">
+    <title> http </title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            width: 100%;
+            height: 200px;
+            margin: 0;
+            padding: 0.1px;
+        }
+        header {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 4% 0 0 4%;
+            padding: 0;
+        }
+        #section {
+            width: 500px;
+            height: 100vh;
+            margin: 0 0 10% 4%;
+            padding: 0;
+        }
+        p {
+            text-align: justify;
+            width: 800px;
+            font-size: 18px;
+            margin: 10px 0 20px 0;
+        }
+        ul {
+            margin: 0;
+            width: 100%;
+            height: auto;
+            text-decoration: none;
+            list-style: none;
+        }
+        li {
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+        .container-menu {
+            width: 100%;
+            height: 50px;
+            margin: 30px 0 0 30px;
+            padding: 0;
+        }
+        .menu-a {
+            border: 1px solid #0466c8;
+            border-radius: 100%;
+            background-color: #0466c8;
+            color: #fff;
+            padding: 10px;
+            height: 100px;
+            text-decoration: none; 
+            font-weight: 700;
+        }
+        .menu-a:hover {
+            background-color: black;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container-menu">
+            <a class="menu-a" href="sumary.html"> voltar </a>
+        </div>        
+            <header> 
+            <h1> Aprendendo o HTTP Hypertext Transfer Protocol </h1>
+        </header>
+    </section>
+    <div>
+        <section id="section">
+            <h2> O que é HTTP </h2>
+            <p>
+                <i>HTTP (Hypertext Transfer Protocol)</i> é um protocolo de comunicação usado na web para tranferir e receber informações entre um cliente
+                (geralmente um navegador, como Chrome ou Firefox) e um servidor web. Quando você acessa um site, o seu navegador faz uma solicitação HTTP
+                ao servidor que hospeda o site, pedindo para carregar a página solicitada.
+            </p>
+            <ul>
+                <li>
+                    <strong> Requisição HTTP: </strong> quando você digita um endereço na barra de endereços do navegador (como "www.google.com"), o navegador
+                    envia uma solicitação HTTP para o servidor onde o site está hospedado. Essa solicitação inclui informações sobre o que o navegador deseja
+                    (por exemplo, uma página HTML, uma imagem, etc).
+                </li><br>
+                <li>
+                    <strong> Resposta HTTP: </strong> o servidor responde a essa solicitação enviando os dados necessários de volta ao navegador. Isso pode ser
+                    uma página web, uma imagem ou outros arquivos. A resposta também inclui um código de status, que indica se a requisição foi bem-sucedida
+                    (como "200 OK") ou se houver algum erro (como "404 Not Found", ou "500 Internal Server Error").
+                </li>
+            </ul> <br>
+
+            <h2> Códigos de Status HTTP </h2>
+            <p> 
+                os códigos de status indicam o resultado da requisição e são divididos em várias categorias:
+            </p>
+            <ul>
+                <li>
+                    <strong> 1xx (informativos): </strong> indicam que a solicitação foi recebida e o processo está em andamento. <br>
+                    <strong>Exemplo: 100 Continue -</strong> O servidor recebeu a solicitação e o cliente pode continuar. <br><br>
+                </li>
+                <li>
+                    <strong> 2xx (Sucess): </strong> indica que a solicitação foi bem-sucedida. 
+                    <strong> Exemplo: 200 OK -</strong> A solicitação foi bem-sucedida, e a resposta contém o recurso solicitado. <br>
+                    <strong> Exemplo: 201 Created -</strong>  A solicitação foi bem-sucedida, e um novo recurso foi criado. <br><br>
+                </li>
+                <li>
+                    <strong> 3xx (redirecionamento): </strong> indicam que o cliente precisa tomar uma ação adicional para completar
+                    a requisição (geralmente, um redirecionamento). <br>
+                    <strong> Exemplo: 301 Moved Permanently -</strong> o recurso foi movido para outro lugar permanentemente.<br>
+                    <strong> Exemplo: 302 Found -</strong> o recurso foi temporariamente movido para outra URL.<br><br>
+                </li>
+                <li>
+                    <strong> 4xx (Erros do Cliente): </strong> indica que houve um erro na solicitação feita pelo cliente.<br>
+                    <strong> Exemplo: 400 Bad Request -</strong> a solicitação foi malformada ou contém erros.<br>
+                    <strong> Exemplo: 403 Forbidden -</strong> o cliente não tem permissão para acessar o recurso.<br>
+                    <strong> Exemplo: 404 Not Found -</strong> o recurso solicitado não foi encontrado no servidor.<br><br>
+                </li>
+                <li>
+                    <strong> 5xx (Erros do Servidor): </strong> indicam que o servidor falhou ao processar a solicitação.<br>
+                    <strong> Exemplo: 500 (Internal Server Error) -</strong> o servidor encontrou um erro e não pode completar a requisição.<br>
+                    <strong> Exemplo: 502 Bad Gateway -</strong> o servidor agiu como um gateway ou proxy e recebeu uma resposta inválida
+                    de um servidor upstream.<br><br>
+                </li>
+            </ul><br>
+
+            <h2> Métodos HTTP </h2>
+            <p>
+                Os métodos HTTP indicam o tipo de operação que o cliente deseja realizar no servidor. Os métodos mais comuns são:
+            </p>
+            <ul>
+                <li>
+                    <strong> GET: </strong> solicitação um recurso do servidor, como uma página HTML ou imagem. Este é o método mais usado.
+                </li><br>
+                <li>
+                    <strong> POST: </strong> envia dados ao servidor (como quando você preenche um formulário de cadastro). É usado quando
+                    você deseja criar ou atualizar algo no servidor.
+                </li><br>
+                <li>
+                    <strong> PUT: </strong> substitui um recurso existente no servidor. É semelhante ao POST, mas geralmente é usado para
+                    atualizar recursos.
+                </li><br>
+                <li>
+                    <strong> DELETE: </strong> solicita que um recurso seja excluido do servidor.
+                </li><br>
+                <li>
+                    <strong> HEAD: </strong> retorna apenas os cabeçalhos da resposta, sem o corpo. Pode ser útil para verificar se um recurso
+                    está disponivel sem precisar baixar todo o conteúdo.
+                </li><br>
+                <li>
+                    <strong> OPTIONS: </strong> informa mais métodos HTTP o servidor suporta para um determinado recurso.
+                </li><br>
+                <li>
+                    <strong> PATCH: </strong> modifica parcialmente um recurso no servidor, sem substituí-lo totalmente (diferente do PUT).
+                </li><br><br>
+            </ul><br>
+
+            <h2> Cookie e Sessões </h2>
+            <p>     
+                O <strong>HTTP</strong> é um protocolo sem estado, o que significa que cada requisição é independente. Para manter o contexto
+                entre requisições (como quando você está logado em um site), usamos cookies e sessoẽs. <br>
+            </p>
+            <ul>
+                <li>
+                    <strong> Cookie </strong> são pequenos arquivos armazenados no navegador do cliente que permitem que o servidor "lembre" 
+                    informações entre requisições, como preferências de usuário ou estado de login.
+                </li><br>
+                <li>
+                    <strong> Sessões </strong> funcionam de maneira similar, mas as informações são armazenadas no servidor e referenciadas por 
+                    um identificador (ID) enviado para o cliente, geralmente através de um cookie.
+                </li><br>
+            </ul>
+
+            <h2> Como funcionam os Cookie</h2>
+
+        </section>
+    </div>
+</body>
+</html>
