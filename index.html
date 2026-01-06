@@ -56,7 +56,7 @@
         a {
             color: #fff;
             text-transform: uppercase;
-            font-size: 8rem;
+            font-size: 7rem;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-decoration: none;
             width: auto;
@@ -70,15 +70,23 @@
             height: auto;
             cursor: pointer;
         }
+
+        @media screen and (max-width: 500px) {
+            #a {
+                font-size: 3rem;
+            }
+        }
+
+
     </style>
 </head>
 <body>
     <section>
         <header>
             <h1> 
-                <a href="sumary.html" title="Click aqui..."> square-room </a>
+                <a id="a" href="sumary.html" title="Click aqui..."> square-room </a>
             </h1>
-            <p> Está é uma página de apresentação da squareroom.tech utilizando o servidor de hospedagem github.io</p>
+            <p> grupo de desenvolvedores privados </p>
         </header>
     </section>
     <script>
