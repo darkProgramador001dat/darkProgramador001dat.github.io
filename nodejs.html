@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" author="darkProgramador001dat">
+    <title> squareroom.tech </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }        
+        .container-index {
+            width: 100%;
+            height: 120px;
+            margin: 0;
+            padding: 0.1px;
+        }
+        .return-index {
+            width: 100%;
+            height: auto;
+            margin: 30px 0 0 30px;
+            padding: 0.1px;
+        }
+        #index {
+            border: 1px solid #0466c8;
+            border-radius: 100%;
+            background-color: #0466c8;
+            color: #fff;
+            padding: 10px;
+            height: auto;
+            text-decoration: none; 
+            font-weight: 700;
+        }
+        #index:hover {
+            background-color: black;
+            color: yellow;
+        }
+        .container-header {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container centro */
+        .container-center {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            width: 800px;
+            font-size: 18px;
+            margin: auto;
+        }
+        .passo1-img {
+            text-align: center;
+        }
+        img {
+            border-radius: 6px;
+        }
+        ol {
+            width: 800px;
+            margin: auto;
+        }
+
+        @media screen and (max-width: 472px) {
+            p {
+                width: 400px;
+            }
+            img {
+                width: 300px;
+                height: 200px;
+            }
+            ol {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container-index">
+        <div class="return-index">
+            <a id="index" href="index.html"> voltar </a>
+            </div>
+    </section>    
+
+    <div class="container-center">
+        <h1> Nodejs e Express 5.1 utilizando javascript para programar um Sistema de Login </h1>
+        <p> Olá boa noite pessoal, hojê 6 jan de 2026. Vamos construir um projeto backend utilizando 
+            a linguagem de programação Javascript e npm <i>node packet manager</i> e as bibliotecas do NodeJS para preparação do nosso ambiente
+            de produção. Preste bastante atenção, o processo de desenvolver um software não é reenventar a roda,
+            e sim enteder como funciona o sistema em Sí. Após terminar realize um estudo mais aprofundado sobre as variáveis.
+            acesse os links <a href="https://www.npmjs.com/"> npm</a> e <a href="http://">nodejs</a> faça o Downloads.
+        </p>
+        <br>
+        <br>
+        <h2> O prejeto </h2>
+        <p>
+            Nós vamos começar baixando e instalando as depêndencias NPM e NodeJS, logo após terminar crie uma nova pasta com o nome de <strong> scr </strong>
+            acesse a pasta, E siga os
+            passos abaixo, com imagem. <strong> O projeto é um servidor backend, dentro do servidor terá um Array <i>lista</i>
+            que conterá informações do administrador de sistema como usuário e senha, vamos criptografar a senha. 
+            por segurança, utilizando o bcrypt. Na construção do servidor vamos utilizar Express 5.1 vamos construir
+            o frontend dentro no servidor em sí. Eu utilizei o editor de texto do linux Ubunut 24.0 o nano 7.2 Se você usa windows
+            pode usar VScode ou qualquer outro editor, lembre de salvar seus códigos com a extensão .js formato para
+            Javascript.
+        </strong>
+        </p>
+
+        <h2> passo 1 </h2>
+        <div class="passo1-img">
+            <a href="ambiente.png">
+                <img src="/ambiente.png" alt="error not support" width="800" height="500">
+            </a>
+        </div>
+        <p>
+            Com o comando <strong> npm init -y </strong> estamos criando um ambiente de desenvolvimento com <i> node packet manager.</i>
+            O que siginifica que na pasta <strong> src </strong> que foi construída, terá outras subpastas que são as nossas depêndencias, como as bibiotecas que iremos
+            baixar, é importante não apagar nenhuma dessas subpastas que o proprío NPM criou!. O único arquivo que podemos editar no futuro é o package.json 
+            Nele contém informações do seu projeto, qual é o nome da pasta do seu projeto, o nome do arquivo principal do projeto, versão no NodeJS, 
+            palavras chaves, autor do projeto, e as depêndencias instaladas no projeto, etc.
+            <br>
+            Ao executar o comando <strong> npm i express </strong> aqui você aprende como baixar uma biblioteca. Se eu pedir para você baixar
+            uma biblioteca, você já sabe. Para darmos sequência, creio Eu! que até aqui, você criou uma pasta com o nome de <i> src </i> Entrou! é executou os seguintes comando!
+            informados acima.
+        </p>
+        <br>
+        <h2> passo 2 </h2>
+        <div class="passo1-img">
+            <a href="servidor.png">
+                <img src="servidor.png" alt="error not support" width="800" height="500">
+            </a>
+        </div>
+        <p> Vamos criar nosso primeiro servidor <strong> Hello World </strong> estamos utilizando o Framework Express versão 5.1, para construir
+            um servidor, o Express é repleto de diversas bibliotecas. Como de criptografia, para realizar CRUD, para metódos de segurança, etc. 
+            Ops! foco, vamos criar um arquivo com o nome de <i>index.js </i> E,
+            ao copiar o código acima, você criou sua primeira rota, e você pode acessar executando o comando no seu prompt <strong> node index.js </strong>
+            para enfim, o software funcionar. 
+            Sempre utilize a nomenclatura correta, o <i>index.js</i> é primeiro arquivos de inicialização, dentro de um servidor. Agora abra o navegador e 
+            digite http://localhost:5500 e visualize seu servidor online.
+        </p>
+        <br>
+        <h2> passo 3 </h2>
+        <div class="passo1-img">
+            <a href="post.png">
+                <img src="post.png" alt="error not support" width="800" height="500">
+            </a>
+        </div>
+        <p>
+            Vamos dar um upgrade no servidor, construindo dentro no nosso software uma outra rota GET para renderizar um frontend básico.
+            Criaremos um formulário de login, siga corretamente a imagem acima, espaçamentos deve sem usado. Aqui foi construído 
+            um formulário frontend dentro do servidor. Interessante!
+        </p>
+        <br>
+        <h2> passo 4 </h2>
+        <div class="passo1-img">
+            <a href="full.png">
+                <img src="full.png" alt="error not support" width="800" height="500">
+            </a>
+        </div>
+        <p>
+            Agora antes de começar o passo 4, precisamos instalar a biblioteca do bcrypt primeiro com o comando 
+            <strong> npm i bcrypt </strong> assim que for instalado, podemos dar sequencia nos códigos.
+            Escrevendo o código, nesse código. Construímos uma variavel chamada users, que recebe um Array de username e password.
+            armazenaremos informações como username e password(nome de usuário e senha). Para a senha não ficar em texto legível como
+            (minhasenha123) vamos usar a segurança do bcrypt para criptografa-la. O bcrypt, funciona da seguinte forma, para
+            descriptograr a chave é necessário a mesma chave. Isso é criptografia assímetrica. Você pode criar seu 
+            hash(palavra criptografada) da seguinte forma, acessando <a href="https://bcrypt-generator.com/"> bcrypt online </a>
+        </p>
+        <br>
+
+        <h2> passo 5 </h2>
+        <div class="passo1-img">
+            <a href="end.png">
+                <img src="end.png" alt="error not support" width="800" height="500">
+            </a>
+        </div>
+        <p>
+            Agora precisamos testar nossa aplicação, Se a entrada do usuário com a senha estiver correta, realizando a comparação 
+            com o nosso Array, ele libera o acesso, retornando Login Sucefully. 
+        </p>
+        <br>
+
+        <h2> possivéis erros, na hora do aprendizado! </h2>
+        <ol> <strong> ReferenceError:</strong>  variável não existe, não está defina, ou podendo ser um erro de escrita.</ol>
+        <ol> <strong> Cannot find module:</strong> Está faltando algum modulo, verifique se as bibliotecas foram instaladas. </ol>
+        <ol> <strong> TypeError [ERR_INVALID_ARG_TYPE]:</strong> Error do lado do servidor, passagem de argumento inválida. </ol>
+        <br><br>
+    </div>
+</body>
+</html>
