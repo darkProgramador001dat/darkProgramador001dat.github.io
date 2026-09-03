@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Etiquetas</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eeeeee;
+        }
+
+
+        /* ================================
+           FORMULÁRIO
+        ================================= */
+
+        form {
+            width: 370px;
+
+            margin-left: 20px;
+            margin-top: 20px;
+
+            padding: 20px;
+
+            background: white;
+
+            border-radius: 8px;
+        }
+
+
+        .campo {
+            margin-bottom: 12px;
+        }
+
+
+        label {
+            display: block;
+
+            margin-bottom: 5px;
+
+            font-size: 16px;
+
+            font-weight: 600;
+        }
+
+
+        input {
+            display: block;
+
+            width: 100%;
+
+            padding: 7px;
+
+            margin-bottom: 10px;
+
+            font-size: 16px;
+
+            font-family:
+                Verdana,
+                Geneva,
+                Tahoma,
+                sans-serif;
+
+            text-transform: uppercase;
+        }
+
+
+        /* ================================
+           BOTÕES
+        ================================= */
+
+        .botoes {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 10px;
+        }
+
+
+        button {
+
+            flex: 1;
+
+            margin-top: 10px;
+
+            padding: 8px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           ÁREA DA ETIQUETA
+        ================================= */
+
+        #areaImpressao {
+
+            width: 210mm;
+
+            min-height: 297mm;
+
+            margin: 30px auto;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            box-shadow:
+                0 0 10px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ================================
+           ETIQUETA
+        ================================= */
+
+        .etiqueta {
+
+            width: 140mm;
+
+            height: 50mm;
+
+            border: 1px solid #000;
+
+            padding: 4mm;
+
+            box-sizing: border-box;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: white;
+
+            color: black;
+
+            position: relative;
+        }
+
+
+        /* ================================
+           MARCA
+        ================================= */
+
+        .marca {
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           NOME DO PRODUTO
+        ================================= */
+
+        .nome-produto {
+
+            margin-top: 2mm;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+        }
+
+
+        /* ================================
+           INFORMAÇÕES
+        ================================= */
+
+        .informacoes {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-top: 2mm;
+
+            font-size: 10px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           PREÇO
+        ================================= */
+
+        .preco {
+
+            margin-top: 2mm;
+
+            font-size: 58px;
+
+            font-weight: 900;
+        }
+
+
+        /* ================================
+           CÓDIGO
+        ================================= */
+
+        .codigo {
+
+            position: absolute;
+
+            left: 4mm;
+
+            bottom: 5mm;
+
+            font-size: 9px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           DATA
+        ================================= */
+
+        .data {
+
+            position: absolute;
+
+            right: 4mm;
+
+            bottom: 5mm;
+
+            font-size: 9px;
+        }
+
+
+        /* ================================
+           IMPRESSÃO
+        ================================= */
+
+        @page {
+
+            size: A4 portrait;
+
+            margin: 0;
+        }
+
+
+        @media print {
+
+            body {
+
+                background: white;
+
+            }
+
+
+            form {
+
+                display: none;
+
+            }
+
+
+            #areaImpressao {
+
+                width: 210mm;
+
+                height: 297mm;
+
+                min-height: 297mm;
+
+                margin: 0;
+
+                box-shadow: none;
+
+                display: flex;
+
+                justify-content: center;
+
+                align-items: center;
+
+            }
+
+
+            .etiqueta {
+
+                width: 100mm;
+
+                height: 50mm;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         FORMULÁRIO
+    ================================== -->
+
+    <form action="">
+
+
+        <div class="campo">
+
+            <label for="marca">
+                MARCA:
+            </label>
+
+            <input
+                type="text"
+                name="marca"
+                id="marca"
+                placeholder="Digite a marca do produto">
+
+        </div>
+
+
+
+        <div class="campo">
+
+            <label for="nomeProduto">
+                NOME DO PRODUTO:
+            </label>
+
+            <input
+                type="text"
+                name="nomeProduto"
+                id="nomeProduto"
+                placeholder="Digite o nome do produto">
+
+        </div>
+
+
+
+        <div class="campo">
+
+            <label for="codigoInterno">
+                CÓDIGO INTERNO:
+            </label>
+
+            <input
+                type="text"
+                name="codigoInterno"
+                id="codigoInterno"
+                placeholder="Digite o código interno">
+
+        </div>
+
+
+
+        <div class="campo">
+
+            <label for="categoria">
+                CATEGORIA:
+            </label>
+
+            <input
+                type="text"
+                name="categoria"
+                id="categoria"
+                placeholder="Digite a categoria">
+
+        </div>
+
+
+
+        <div class="campo">
+
+            <label for="preco">
+                PREÇO REGULAR:
+            </label>
+
+            <input
+                type="number"
+                name="preco"
+                id="preco"
+                placeholder="0.00"
+                step="0.01"
+                inputmode="decimal">
+
+        </div>
+
+
+
+        <div class="campo">
+
+            <label for="codigoProduto">
+                CÓDIGO DO PRODUTO:
+            </label>
+
+            <input
+                type="text"
+                name="codigoProduto"
+                id="codigoProduto"
+                placeholder="Digite o código do produto">
+
+        </div>
+
+
+
+        <div class="botoes">
+
+            <button
+                type="button"
+                id="btnVisualizar">
+
+                Visualizar etiqueta
+
+            </button>
+
+
+            <button
+                type="button"
+                id="btnPDF">
+
+                Gerar PDF
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+
+
+    <!-- =================================
+         ÁREA DE IMPRESSÃO A4
+    ================================== -->
+
+    <div id="areaImpressao">
+
+
+        <!-- ETIQUETA -->
+
+        <div class="etiqueta">
+
+
+            <div
+                class="marca"
+                id="etiquetaMarca">
+
+                MARCA
+
+            </div>
+
+
+
+            <div
+                class="nome-produto"
+                id="etiquetaNome">
+
+                NOME DO PRODUTO
+
+            </div>
+
+
+
+            <div class="informacoes">
+
+
+                <span>
+
+                    Cód. interno:
+
+                    <strong id="etiquetaCodigoInterno">
+                        12345
+                    </strong>
+
+                </span>
+
+
+
+                <span>
+
+                    Categoria:
+
+                    <strong id="etiquetaCategoria">
+                        001
+                    </strong>
+
+                </span>
+
+
+            </div>
+
+
+
+            <div
+                class="preco"
+                id="etiquetaPreco">
+
+                R$ 8,33
+
+            </div>
+
+
+
+            <div
+                class="codigo"
+                id="etiquetaCodigo">
+
+                Código:
+                7891234567890
+
+            </div>
+
+
+
+            <div
+                class="data"
+                id="etiquetaData">
+
+                Impressão:
+                03/09/2026
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+
+
+        /* ================================
+           CAMPOS DO FORMULÁRIO
+        ================================= */
+
+        const marca =
+            document.getElementById("marca");
+
+
+        const nomeProduto =
+            document.getElementById("nomeProduto");
+
+
+        const codigoInterno =
+            document.getElementById("codigoInterno");
+
+
+        const categoria =
+            document.getElementById("categoria");
+
+
+        const preco =
+            document.getElementById("preco");
+
+
+        const codigoProduto =
+            document.getElementById("codigoProduto");
+
+
+
+        /* ================================
+           ELEMENTOS DA ETIQUETA
+        ================================= */
+
+        const etiquetaMarca =
+            document.getElementById(
+                "etiquetaMarca"
+            );
+
+
+        const etiquetaNome =
+            document.getElementById(
+                "etiquetaNome"
+            );
+
+
+        const etiquetaCodigoInterno =
+            document.getElementById(
+                "etiquetaCodigoInterno"
+            );
+
+
+        const etiquetaCategoria =
+            document.getElementById(
+                "etiquetaCategoria"
+            );
+
+
+        const etiquetaPreco =
+            document.getElementById(
+                "etiquetaPreco"
+            );
+
+
+        const etiquetaCodigo =
+            document.getElementById(
+                "etiquetaCodigo"
+            );
+
+
+        const etiquetaData =
+            document.getElementById(
+                "etiquetaData"
+            );
+
+
+
+        /* ================================
+           BOTÕES
+        ================================= */
+
+        const btnVisualizar =
+            document.getElementById(
+                "btnVisualizar"
+            );
+
+
+        const btnPDF =
+            document.getElementById(
+                "btnPDF"
+            );
+
+
+
+        /* ================================
+           VISUALIZAR ETIQUETA
+        ================================= */
+
+        btnVisualizar.addEventListener(
+            "click",
+            function () {
+
+
+                /* Marca */
+
+                etiquetaMarca.textContent =
+                    marca.value ||
+                    "MARCA";
+
+
+
+                /* Nome */
+
+                etiquetaNome.textContent =
+                    nomeProduto.value ||
+                    "NOME DO PRODUTO";
+
+
+
+                /* Código interno */
+
+                etiquetaCodigoInterno.textContent =
+                    codigoInterno.value ||
+                    "00000";
+
+
+
+                /* Categoria */
+
+                etiquetaCategoria.textContent =
+                    categoria.value ||
+                    "000";
+
+
+
+                /* Preço */
+
+                if (preco.value) {
+
+                    const valor =
+                        Number(preco.value);
+
+
+                    etiquetaPreco.textContent =
+                        valor.toLocaleString(
+                            "pt-BR",
+                            {
+                                style: "currency",
+                                currency: "BRL"
+                            }
+                        );
+
+                }
+
+                else {
+
+                    etiquetaPreco.textContent =
+                        "R$ 0,00";
+
+                }
+
+
+
+                /* Código do produto */
+
+                etiquetaCodigo.textContent =
+                    "Código: " +
+                    (
+                        codigoProduto.value ||
+                        "0000000000000"
+                    );
+
+
+
+                /* Data */
+
+                const hoje =
+                    new Date();
+
+
+                const dia =
+                    String(
+                        hoje.getDate()
+                    ).padStart(2, "0");
+
+
+                const mes =
+                    String(
+                        hoje.getMonth() + 1
+                    ).padStart(2, "0");
+
+
+                const ano =
+                    hoje.getFullYear();
+
+
+                etiquetaData.textContent =
+                    "Impressão: " +
+                    `${dia}/${mes}/${ano}`;
+
+
+            }
+        );
+
+
+
+        /* ================================
+           GERAR PDF / IMPRIMIR
+        ================================= */
+
+        btnPDF.addEventListener(
+            "click",
+            function () {
+
+                window.print();
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
